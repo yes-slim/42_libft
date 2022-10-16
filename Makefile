@@ -6,11 +6,11 @@
 #    By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/15 11:42:28 by yes-slim          #+#    #+#              #
-#    Updated: 2022/10/16 13:58:09 by yes-slim         ###   ########.fr        #
+#    Updated: 2022/10/16 17:22:38 by yes-slim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = gcc #C compiler
+CC = gcc 
 
 CFLAGS = -Wall -Werror -Wextra -c
 

@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 09:08:46 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/16 12:46:58 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/10/16 19:23:29 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,5 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t n);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s, char const *set);
-
+char	*ft_itoa(int n);
 #endif

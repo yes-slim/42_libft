@@ -6,7 +6,7 @@
 #    By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/15 11:42:28 by yes-slim          #+#    #+#              #
-#    Updated: 2022/10/16 12:48:10 by yes-slim         ###   ########.fr        #
+#    Updated: 2022/10/16 13:58:09 by yes-slim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ CSRCS = ft_isalpha.c	ft_toupper.c	\
 		ft_calloc.c		ft_bzero.c		\
 		ft_strdup.c						\
 
-OBJF = ft_isalpha.o	ft_toupper.o	\
+OBJF =	ft_isalpha.o	ft_toupper.o	\
 		ft_isdigit.o	ft_tolower.o	\
 		ft_isalnum.o	ft_strchr.o		\
 		ft_isascii.o	ft_strrchr.o	\
@@ -40,12 +40,11 @@ OBJF = ft_isalpha.o	ft_toupper.o	\
 		ft_strlcat.o	ft_strlcpy.o	\
 		ft_strlen.o		ft_strnstr.o	\
 		ft_calloc.o		ft_bzero.o		\
-		ft_strdup.o 					\
+		ft_strdup.o
 
 DEL = rm -rf
 
 NAME = libft.a
-
 
 
 all : 

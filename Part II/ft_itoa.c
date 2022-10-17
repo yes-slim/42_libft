@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 19:22:24 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/17 15:18:20 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/10/17 17:45:31 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,28 @@
 
 static char	*ft_rev(char *str)
 {
-    int        i;
-    int        len;
-    char    tmp;
+	int		i;
+	int		len;
+	char	tmp;
 
-    i = 0;
-    len = ft_strlen(str) - 1;
-    while (i < len)
-    {
-        tmp = str[i];
-        str[i] = str[len];
-        str[len] = tmp;
-        i++;
-        len--;
-    }
-    return (str);
+	i = 0;
+	len = ft_strlen(str) - 1;
+	while (i < len)
+	{
+		tmp = str[i];
+		str[i] = str[len];
+		str[len] = tmp;
+		i++;
+		len--;
+	}
+	return (str);
 }
 
 static char	*ft_alloc(int n)
 {
 	char	*str;
 	int		count;
-	
+
 	count = 0;
 	if (n < 0)
 		count++;
@@ -50,10 +50,10 @@ static char	*ft_alloc(int n)
 	return (str);
 }
 
-static char *ft_special(int i)
+static char	*ft_special(int i)
 {
 	char	*str;
-	
+
 	if (i == 0)
 		str = ft_strdup("0");
 	if (i == INNT_MIN)
@@ -61,24 +61,15 @@ static char *ft_special(int i)
 	return (str);
 }
 
-char	*ft_itoa(int n)
+static char	*ft_fill(int n, char *str)
 {
-	int 	i;
-	int		s;
-	char	*str;
+	int	i;
+	int	s;
 
-	if (n == 0 || n == INNT_MIN)
-	{
-		str = ft_special(n);
-		return (str);
-	}
-	str = ft_alloc(n);
-	if (!str)
-		return (NULL);
 	i = 0;
 	s = n;
 	if (n < 0)
-		n *= -1;
+	n *= -1;
 	while (n != 0)
 	{
 		str[i] = ((n % 10) + 48);
@@ -91,6 +82,22 @@ char	*ft_itoa(int n)
 		i++;
 	}
 	str[i] = '\0';
+	return (str);
+}
+
+char	*ft_itoa(int n)
+{
+	char	*str;
+
+	if (n == 0 || n == INNT_MIN)
+	{
+		str = ft_special(n);
+		return (str);
+	}
+	str = ft_alloc(n);
+	if (!str)
+		return (NULL);
+	str = ft_fill(n, str);
 	ft_rev(str);
 	return (str);
 }

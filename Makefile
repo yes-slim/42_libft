@@ -6,7 +6,7 @@
 #    By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/15 11:42:28 by yes-slim          #+#    #+#              #
-#    Updated: 2022/10/17 17:20:48 by yes-slim         ###   ########.fr        #
+#    Updated: 2022/10/17 17:50:22 by yes-slim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,12 +38,14 @@ CSRCS = ft_isalpha.c	ft_toupper.c	\
 OBJF = $(CSRCS:.c=.o)
 
 
+all : $(NAME)
 
-$(NAME) :
-	$(CC) $(CFLAGS) $(CSRCS)
+
+$(NAME) : $(OBJF)
 	$(LIBF) $(NAME) $(OBJF)
 
-all : $(NAME) clean fclean re
+%.o : %.c
+	$(CC) $(CFLAGS) $<
 
 clean :
 	$(DEL) $(OBJF)

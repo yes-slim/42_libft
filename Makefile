@@ -6,7 +6,7 @@
 #    By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/15 11:42:28 by yes-slim          #+#    #+#              #
-#    Updated: 2022/10/16 19:27:15 by yes-slim         ###   ########.fr        #
+#    Updated: 2022/10/17 10:33:35 by yes-slim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,9 @@ CSRCS = ft_isalpha.c	ft_toupper.c	\
 		ft_strlcat.c	ft_strlcpy.c	\
 		ft_strlen.c		ft_strnstr.c	\
 		ft_calloc.c		ft_bzero.c		\
-		ft_strdup.c
+		ft_strdup.c		ft_substr.c		\
+		ft_strjoin.c	ft_strtrim.c	\
+		
 
 OBJF =	ft_isalpha.o	ft_toupper.o	\
 		ft_isdigit.o	ft_tolower.o	\
@@ -40,7 +42,10 @@ OBJF =	ft_isalpha.o	ft_toupper.o	\
 		ft_strlcat.o	ft_strlcpy.o	\
 		ft_strlen.o		ft_strnstr.o	\
 		ft_calloc.o		ft_bzero.o		\
-		ft_strdup.o
+		ft_strdup.o		ft_substr.c		\
+		ft_strjoin.c	ft_strtrim.c	\
+		
+		
 
 DEL = rm -rf
 

@@ -6,9 +6,11 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 12:51:10 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/16 12:07:02 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/10/17 10:03:31 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

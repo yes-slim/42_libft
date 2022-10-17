@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 13:26:12 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/15 20:31:23 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/10/17 10:30:25 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memcpy(void *dst, const void *sr, size_t n)
 	unsigned char	*dest;
 	unsigned char	*src;
 
-	if (!dst || !sr)
+	if (!dst && !sr)
 		return (NULL);
 	i = 0;
 	dest = (unsigned char *)dst;

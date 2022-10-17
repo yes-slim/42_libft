@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 13:05:22 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/15 20:30:27 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/10/17 10:23:26 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	size_t			i;
 	unsigned char	*str;
 
-	if (!s)
-		return (NULL);
 	i = 0;
 	str = (unsigned char *)s;
 	while (i < n)

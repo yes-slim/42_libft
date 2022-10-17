@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 13:49:34 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/16 12:12:34 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/10/17 10:22:21 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void	*ft_memset(void *str, int c, size_t len)
 	unsigned char	*s;
 	size_t			i;
 
-	if (!str)
-		return (NULL);
 	i = 0;
 	s = (unsigned char *)str;
 	while (i < len)

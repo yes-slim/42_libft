@@ -6,13 +6,14 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 09:08:46 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/17 10:33:51 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/10/17 16:37:38 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# define INNT_MIN -2147483648
 # include <stdio.h>
 # include <stdlib.h>
 
@@ -46,5 +47,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s, char const *set);
 char	*ft_itoa(int n);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 #endif

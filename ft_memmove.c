@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 13:25:11 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/17 10:22:59 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/10/17 14:49:18 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,20 @@ void	*ft_memmove(void *dst, const void *sr, size_t n)
 	unsigned char	*dest;
 	unsigned char	*src;
 
+	if (!dst && !sr)
+		return (NULL);
 	dest = (unsigned char *)dst;
 	src = (unsigned char *)sr;
 	len = n;
-	while (len > 0)
+	if (dest > src)
 	{
-		len--;
-		dest[len] = src[len];
+		while (len > 0)
+		{
+			len--;
+			dest[len] = src[len];
+		}
 	}
+	else
+		ft_memcpy(dst, sr, n);
 	return ((void *)dest);
 }

@@ -6,7 +6,7 @@
 #    By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/15 11:42:28 by yes-slim          #+#    #+#              #
-#    Updated: 2022/10/17 10:33:35 by yes-slim         ###   ########.fr        #
+#    Updated: 2022/10/17 16:38:00 by yes-slim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,11 @@ CC = gcc
 
 CFLAGS = -Wall -Werror -Wextra -c
 
+NAME = libft.a
+
 LIBF = ar rc
+
+DEL = rm -rf
 
 CSRCS = ft_isalpha.c	ft_toupper.c	\
 		ft_isdigit.c	ft_tolower.c	\
@@ -29,7 +33,7 @@ CSRCS = ft_isalpha.c	ft_toupper.c	\
 		ft_calloc.c		ft_bzero.c		\
 		ft_strdup.c		ft_substr.c		\
 		ft_strjoin.c	ft_strtrim.c	\
-		
+		ft_itoa.c
 
 OBJF =	ft_isalpha.o	ft_toupper.o	\
 		ft_isdigit.o	ft_tolower.o	\
@@ -42,19 +46,19 @@ OBJF =	ft_isalpha.o	ft_toupper.o	\
 		ft_strlcat.o	ft_strlcpy.o	\
 		ft_strlen.o		ft_strnstr.o	\
 		ft_calloc.o		ft_bzero.o		\
-		ft_strdup.o		ft_substr.c		\
-		ft_strjoin.c	ft_strtrim.c	\
+		ft_strdup.o		ft_substr.o		\
+		ft_strjoin.o	ft_strtrim.o	\
+		ft_itoa.o
 		
-		
 
-DEL = rm -rf
 
-NAME = libft.a
 
+$(NAME) :
+	$(LIBF) $(NAME) $(OBJF)
 
 all : 
 	$(CC) $(CFLAGS) $(CSRCS)
-	$(LIBF) $(NAME) $(OBJF)
+	
 
 clean :
 	$(DEL) $(OBJF)

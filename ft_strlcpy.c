@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 14:09:43 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/16 12:21:24 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/10/17 11:35:45 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 		dest[i] = src[i];
 		i++;
 	}
-	if (size == 0)
-		dest[i] = '\0';
+	dest[i] = '\0';
 	return (j);
 }

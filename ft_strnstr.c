@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 14:09:33 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/17 16:42:47 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/10/18 17:30:13 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 		{
 			if (to_find[j + 1] == '\0' && (i + j) < len)
 				return ((char *)&str[i]);
-				j++;
+			j++;
 		}
 		i++;
 	}

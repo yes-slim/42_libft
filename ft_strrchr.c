@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 14:01:06 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/16 12:23:30 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/10/18 10:28:03 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,11 @@ char	*ft_strrchr(const char *str, int c)
 	size_t	i;
 
 	i = ft_strlen(str);
-	if (c == '\0')
+	if ((char)c == '\0')
 		return ((char *)&str[i]);
-	while (str[i] != c)
+	while (str[i] != (char)c && i > 0)
 		i--;
+	if (i == 0 && str[i] != (char)c)
+		return (NULL);
 	return ((char *)&str[i]);
 }

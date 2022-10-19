@@ -6,7 +6,7 @@
 #    By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/15 11:42:28 by yes-slim          #+#    #+#              #
-#    Updated: 2022/10/18 15:47:21 by yes-slim         ###   ########.fr        #
+#    Updated: 2022/10/19 13:58:18 by yes-slim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,10 +34,10 @@ CSRCS = ft_isalpha.c	ft_toupper.c	\
 		ft_strdup.c		ft_substr.c		\
 		ft_strjoin.c	ft_strtrim.c	\
 		ft_itoa.c		ft_strmapi.c	\
-		ft_striteri.c	#ft_putstr_fd.c	\
-		#ft_putendl_fd.c	#ft_putnbr_fd	\
+		ft_striteri.c	ft_putchar_fd.c	\
+		ft_putstr_fd.c	ft_putendl_fd.c	\
+		ft_putnbr_fd.c	ft_split.c		\
 		
-
 OBJF = $(CSRCS:.c=.o)
 
 

@@ -6,11 +6,12 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 19:22:24 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/17 17:45:31 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/10/19 14:40:59 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#define INNT_MIN -2147483648
 
 static char	*ft_rev(char *str)
 {

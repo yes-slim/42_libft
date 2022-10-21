@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 13:54:50 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/20 11:54:23 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/10/21 11:40:48 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,56 +14,26 @@
 
 static int	ft_wrdcount(char const *s, char c)
 {
-	int	i;
-	int	j;
 	int	wc;
+	int	i;
 
 	i = 0;
 	wc = 0;
-	j = ft_strlen(s);
-	while (s[i] == c)
-		i++;
-	while (s[j] == c)
-		j--;
-	while (s[i] != '\0')
+	while (s[i])
 	{
-		if (s[i] == c && i < j + 1)
+		while (s[i] == c)
+			i++;
+		if (s[i] && s[i] != c)
 			wc++;
-		i++;
+		while (s[i] && s[i] != c)
+			i++;
 	}
 	return (wc);
 }
 
-static char	*fillwrd(const char *s, int start , char c)
-{
-	char	*tab;
-	int		i;
-	int		len;
-	
-	len = 0;
-	i = start + 1;
-	while (s[i] != c)
-	{
-		len++;
-		i++;
-	}
-	tab = malloc((len + 1) * sizeof(char));
-	if (!tab)
-		return (NULL);
-	i = 0;
-	while (start < len - 1)
-	{
-		tab[i] = s[start + 1];
-		i++;
-		start++;
-	}
-	tab[i] = '\0';
-	return (tab);
-}
-
 static void	ft_free(char **arr, int i)
 {
-	while (i != 0)
+	while (i >= 0)
 	{
 		free(arr[i]);
 		i--;
@@ -71,42 +41,78 @@ static void	ft_free(char **arr, int i)
 	free(arr);
 }
 
-char    **ft_split(char const *s, char c)
+static char	*fillwrd(const char *s, char c, int start)
 {
-	int	wc;
-	int	wst;
-	int	i;
+	int		i;
+	int		len;
+	char	*tab;
 
-	wc = ft_wrdcount(s, c);
-	char **arr;
-    arr = malloc(wc * sizeof(char*));
-    if (!arr)
-        return(NULL);
-	
 	i = 0;
-	wst = 0;
+	len = 0;
+	while (s[start + len] != c)
+		len++;
+	tab = malloc(sizeof(char) * (len + 1));
+	if (!tab)
+		return (NULL);
+	while (i < len)
+	{
+		tab[i] = s[start];
+		i++;
+		start++;
+	}
+	tab[i] = '\0';
+	return (tab);
+}
+
+static	char	**ft_fillarr(const char *s, char **arr, int wc, char c)
+{
+	int	i;
+	int	x;
+
+	i = 0;
+	x = 0;
 	while (wc != 0)
 	{
-		while (s[wst] != c)
-			wst++;
-		arr[i] = fillwrd(s, wst, c);
-		if (!arr[i])
-			ft_free(arr, i);
-		i++;
+		while (s[i] && s[i] == c)
+			i++;
+		arr[x] = fillwrd(s, c, i);
+		if (!arr[x])
+		{
+			ft_free(arr, x);
+			return (NULL);
+		}
+		x++;
+		while (s[i] && s[i] != c)
+			i++;
 		wc--;
-		while (s[wst] != c && s[wst])
-			wst++;
 	}
-    return (arr);
+	arr[x] = NULL;
+	return (arr);
 }
 
-int main()
+char	**ft_split(char const *s, char c)
 {
-	const char str[] = "hellow    khbkjb kkjh        ohfodshf dsfouh     jdsf sdifuhsd sdjfhs    ";
-	char c = ' ';
-	char **arr;
-	arr = ft_split(str, c);
-	int i;
-	for (i=0 ; i<8; i++)
-		printf("%s",arr[i]);
+	int		wc;
+	char	**arr;
+
+	if (!s)
+		return (NULL);
+	wc = ft_wrdcount(s, c);
+	arr = malloc((wc + 1) * sizeof(char *));
+	if (!arr)
+		return (NULL);
+	arr = ft_fillarr(s, arr, wc, c);
+	return (arr);
 }
+
+// int main()
+// {
+// 	const char str[] = "666 69 420 you nes yes - slim h e l l o w :)";
+// 	char c = ' ';
+// 	char **arr;
+// 	arr = ft_split(str, c);
+// 	int i;
+// 	int wc = ft_wrdcount(str, c);
+// 	for (i=0 ; i<wc; i++)
+// 		printf("%s\n",arr[i]);
+// }

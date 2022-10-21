@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 12:25:27 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/17 10:17:58 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/10/21 12:03:36 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,11 @@ char	*ft_strtrim(char const *s, char const *set)
 	char	*str;
 
 	l = 0;
+	if (s[l] == '\0')
+		return (ft_strdup(""));
 	i = check_front(s, set);
+	if (i == ft_strlen(s))
+		return (ft_strdup(""));
 	j = check_back(s, set);
 	str = malloc((j - i + 2) * sizeof(char));
 	if (!str)

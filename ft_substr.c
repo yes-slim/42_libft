@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 10:17:34 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/19 13:31:59 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/10/21 12:04:01 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,3 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 	subs[j] = '\0';
 	return (subs);
 }
-//int main()
-//{
-//	const char str[] = "asdjhflksjdfh";
-//	char *ret;
-//	ret = ft_substr(str, 10, 8);
-//	printf("%s",ret);
-//}

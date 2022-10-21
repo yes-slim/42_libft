@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 14:09:33 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/20 12:04:28 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/10/21 12:21:27 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,13 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 		}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
+
+// #include <string.h>
+// int main()
+// {
+// 	printf("%s\n", ft_strnstr("aaxx" , "xx", 2));
+// 	printf("%s\n", strnstr("aaxx" , "xx", 2));
+// 	return(0);
+// }

@@ -6,7 +6,7 @@
 #    By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/15 11:42:28 by yes-slim          #+#    #+#              #
-#    Updated: 2022/10/20 11:06:05 by yes-slim         ###   ########.fr        #
+#    Updated: 2022/10/21 11:17:33 by yes-slim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,7 @@ $(NAME) : $(OBJF)
 	$(LIBF) $(NAME) $(OBJF)
 
 %.o : %.c
-	$(CC) $(CFLAGS) $<
+	$(CC) $(CFLAGS) $^
 
 clean :
 	$(DEL) $(OBJF)

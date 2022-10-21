@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 12:02:11 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/19 14:41:52 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/10/20 15:09:50 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,7 @@
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)
-	{
 		ft_putstr_fd("-2147483648", fd);
-	}
 	else if (n < 0)
 	{
 		ft_putchar_fd('-', fd);

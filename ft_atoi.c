@@ -6,7 +6,7 @@
 /*   By: yns-sl <yns-sl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 12:51:10 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/24 09:45:44 by yns-sl           ###   ########.fr       */
+/*   Updated: 2022/10/24 10:44:23 by yns-sl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,12 @@ int	ft_atoi(const char *str)
 	}
 	if (res > __LONG_LONG_MAX__ && si == 1)
 		return (-1);
-	if ((res > __LONG_LONG_MAX__ + 1) && si == -1)
+	if ((res - 1 > __LONG_LONG_MAX__ )&& si == -1)
 		return (0);
 	return ((int)res * si);
+}
+int main()
+{
+	printf("%d", ft_atoi("-922337203685477580"));
+	printf("\n%d", atoi("-922337203685477580"));
 }

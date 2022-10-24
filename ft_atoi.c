@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yns-sl <yns-sl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 12:51:10 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/21 11:52:25 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/10/24 09:45:44 by yns-sl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	res;
-	int	si;
+	int					i;
+	int					si;
+	unsigned long long	res;
 
 	i = 0;
 	res = 0;
@@ -34,5 +34,9 @@ int	ft_atoi(const char *str)
 		res = (res * 10) + (str[i] - '0');
 		i++;
 	}
-	return (res * si);
+	if (res > __LONG_LONG_MAX__ && si == 1)
+		return (-1);
+	if ((res > __LONG_LONG_MAX__ + 1) && si == -1)
+		return (0);
+	return ((int)res * si);
 }

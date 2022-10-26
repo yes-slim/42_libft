@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 13:54:50 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/21 11:40:48 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/10/21 18:08:44 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int	ft_wrdcount(char const *s, char c)
 	wc = 0;
 	while (s[i])
 	{
-		while (s[i] == c)
+		while (s[i] && s[i] == c)
 			i++;
 		if (s[i] && s[i] != c)
 			wc++;
@@ -49,7 +49,7 @@ static char	*fillwrd(const char *s, char c, int start)
 
 	i = 0;
 	len = 0;
-	while (s[start + len] != c)
+	while (s[start + len] && s[start + len] != c)
 		len++;
 	tab = malloc(sizeof(char) * (len + 1));
 	if (!tab)
@@ -104,15 +104,3 @@ char	**ft_split(char const *s, char c)
 	arr = ft_fillarr(s, arr, wc, c);
 	return (arr);
 }
-
-// int main()
-// {
-// 	const char str[] = "666 69 420 you nes yes - slim h e l l o w :)";
-// 	char c = ' ';
-// 	char **arr;
-// 	arr = ft_split(str, c);
-// 	int i;
-// 	int wc = ft_wrdcount(str, c);
-// 	for (i=0 ; i<wc; i++)
-// 		printf("%s\n",arr[i]);
-// }

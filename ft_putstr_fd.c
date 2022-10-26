@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 11:39:43 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/19 14:41:38 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/10/21 17:05:35 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,3 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
-
-//#include <fcntl.h>
-//int main()
-//{
-//	int fd = open("file.txt", 777);
-//	ft_putstr_fd("hellow world :)", fd);
-//	return (0);
-//}

@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 12:02:11 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/20 15:09:50 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/10/21 17:05:32 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(n % 10, fd);
 	}
 }
-
-//#include <fcntl.h>
-//int main()
-//{
-//	int fd = creat("file.txt", 777);
-//	ft_putnbr_fd(-2147483648, fd);
-//	return (0);
-//}

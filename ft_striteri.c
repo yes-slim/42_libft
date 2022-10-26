@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 15:06:54 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/18 16:27:25 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/10/21 17:05:43 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-
-//int main()
-//{
-//  char str[] = "dsadasdad";
-//  ft_striteri(str, &ft__);
-//  printf("%s",str);
-//}

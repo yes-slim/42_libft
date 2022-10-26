@@ -6,13 +6,13 @@
 #    By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/15 11:42:28 by yes-slim          #+#    #+#              #
-#    Updated: 2022/10/21 11:17:33 by yes-slim         ###   ########.fr        #
+#    Updated: 2022/10/21 17:20:00 by yes-slim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc 
 
-CFLAGS = -Wall -Werror -Wextra -c
+CFLAGS = -Wall -Werror -Wextra
 
 NAME = libft.a
 
@@ -48,7 +48,7 @@ $(NAME) : $(OBJF)
 	$(LIBF) $(NAME) $(OBJF)
 
 %.o : %.c
-	$(CC) $(CFLAGS) $^
+	$(CC) $(CFLAGS) -c $^
 
 clean :
 	$(DEL) $(OBJF)

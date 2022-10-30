@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 14:09:40 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/17 15:57:56 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/10/29 18:40:55 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	len;
 
 	j = 0;
-	len = ft_strlen((const char *)dest);
-	i = ft_strlen((const char *)dest);
+	len = ft_strlen(dest);
+	i = ft_strlen(dest);
 	if (ft_strlen(dest) >= size)
 		return (ft_strlen(src) + size);
 	k = ft_strlen(src) + ft_strlen(dest);

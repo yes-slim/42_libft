@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 15:06:54 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/28 17:35:49 by yes-slim         ###   ########.fr       */
+/*   Created: 2022/10/27 10:11:43 by yes-slim          #+#    #+#             */
+/*   Updated: 2022/10/30 10:26:52 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	unsigned int	i;
+	t_list	*head;
 
-	if (!s && !f)
+	if (!new || !lst)
 		return ;
-	i = 0;
-	while (s[i] != '\0')
-	{
-		f(i, &s[i]);
-		i++;
-	}
+	head = *lst;
+	new->next = head;
+	*lst = new;
 }
+// int main()
+// {
+// 	t_list *s_list;
+// 	s_list = ft_lstnew(ft_strdup("456"));
+// 	ft_lstadd_front(&s_list, ft_lstnew(ft_strdup("123")));
+// 	while (s_list)
+// 	{
+// 		printf("%s", s_list->content);
+// 		s_list = s_list->next;
+// 	}
+// }

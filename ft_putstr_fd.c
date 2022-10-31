@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 15:14:36 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/30 21:18:04 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/10/31 13:53:45 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,12 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
+
+// #include <fcntl.h>
+// int main()
+// {
+// 	int	fd;
+
+// 	fd = open("file", O_CREAT | O_RDWR);
+// 	ft_putstr_fd("hellow wowrld", fd);
+// }

@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 12:25:27 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/21 12:03:36 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/10/31 11:43:19 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,11 +59,13 @@ char	*ft_strtrim(char const *s, char const *set)
 	size_t	j;
 	char	*str;
 
+	if (!s)
+		return (NULL);
+	if (!set)
+		return ((char *)s);
 	l = 0;
-	if (s[l] == '\0')
-		return (ft_strdup(""));
 	i = check_front(s, set);
-	if (i == ft_strlen(s))
+	if (s[l] == '\0' || i == ft_strlen(s))
 		return (ft_strdup(""));
 	j = check_back(s, set);
 	str = malloc((j - i + 2) * sizeof(char));
@@ -78,3 +80,11 @@ char	*ft_strtrim(char const *s, char const *set)
 	str[l] = '\0';
 	return (str);
 }
+// int main()
+// {
+// 	char *str = "hellow from the other side of the world";;
+// 	char *set = NULL;
+// 	char *s;
+// 	s = ft_strtrim(str, set);
+// 	printf("%s\n", s);
+// }

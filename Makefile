@@ -6,7 +6,7 @@
 #    By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/15 11:42:28 by yes-slim          #+#    #+#              #
-#    Updated: 2022/10/30 14:11:11 by yes-slim         ###   ########.fr        #
+#    Updated: 2022/10/31 13:56:57 by yes-slim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,9 +38,9 @@ CSRCS = ft_isalpha.c	ft_toupper.c	\
 		ft_putstr_fd.c	ft_putendl_fd.c	\
 		ft_putnbr_fd.c	ft_split.c		\
 
-BONUS_SRCS = ft_lstnew.c		ft_lstsize.c	ft_lstlast.c \
-			 ft_lstadd_back.c	ft_lstadd_front.c			 \
- 			 ft_lstdelone.c		ft_lstclear.c	ft_lstiter.c \
+BONUS_SRCS = ft_lstnew_bonus.c		ft_lstsize_bonus.c	ft_lstlast_bonus.c \
+			 ft_lstadd_back_bonus.c	ft_lstadd_front_bonus.c				   \
+ 			 ft_lstdelone_bonus.c	ft_lstclear_bonus.c	ft_lstiter_bonus.c \
 			 
 OBJF = $(CSRCS:.c=.o)
 
@@ -50,9 +50,6 @@ all : $(NAME)
 
 $(NAME) : $(OBJF)
 	$(LIBF) $(NAME) $(OBJF)
-
-# %.o : %.c
-# 	$(CC) $(CFLAGS) -c $^
 
 bonus : $(OBJF) $(BONUS_OBJF)
 	$(LIBF) $(NAME) $(OBJF)	$(BONUS_OBJF)

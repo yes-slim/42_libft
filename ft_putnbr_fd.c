@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 12:02:11 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/31 13:29:19 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/10/31 23:53:45 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(n % 10, fd);
 	}
 }
-
-// #include <fcntl.h>
-// int main()
-// {
-// 	int	fd;
-
-// 	fd = open("file", O_CREAT | O_RDWR);
-// 	ft_putnbr_fd(1337, fd);
-// 	ft_putchar_fd('\n', fd);
-// 	ft_putnbr_fd(42, fd);
-// 	ft_putstr_fd(" network", fd);
-// 	ft_putchar_fd('\n', fd);
-// }

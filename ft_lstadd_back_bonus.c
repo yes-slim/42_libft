@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 10:12:23 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/30 21:18:40 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/10/31 23:52:33 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,3 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 			*lst = new;
 	}
 }
-
-// int main()
-// {
-// 	t_list *s_list;
-// 	s_list = ft_lstnew(ft_strdup("123"));
-// 	ft_lstadd_back(&s_list, ft_lstnew(ft_strdup("456")));
-// 	while (s_list)
-// 	{
-// 		printf("%s", s_list->content);
-// 		s_list = s_list->next;
-// 	}
-// }

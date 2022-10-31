@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 13:26:12 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/30 16:00:41 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/10/31 23:53:22 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,3 @@ void	*ft_memcpy(void *dst, const void *sr, size_t n)
 	}
 	return ((void *)dest);
 }
-// #include <string.h>
-// int main()
-// {
-// 	char *str = "hellow";
-// 	char *s1;
-// 	s1=str;
-// 	char *s2;
-// 	s2=str;
-// 	ft_memcpy(s1, s2, 5);
-// 	memcpy(s1, s2, 5);
-// }

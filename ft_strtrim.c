@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 12:25:27 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/31 11:43:19 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/10/31 23:55:26 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,11 +80,3 @@ char	*ft_strtrim(char const *s, char const *set)
 	str[l] = '\0';
 	return (str);
 }
-// int main()
-// {
-// 	char *str = "hellow from the other side of the world";;
-// 	char *set = NULL;
-// 	char *s;
-// 	s = ft_strtrim(str, set);
-// 	printf("%s\n", s);
-// }

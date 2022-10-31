@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 10:10:53 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/31 13:57:59 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/10/31 23:53:12 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,3 @@ t_list	*ft_lstnew(void *content)
 	new->next = NULL;
 	return (new);
 }
-
-// int main()
-// {
-// 	t_list	*head;
-
-// 	head = ft_lstnew(ft_strdup("hellow"));
-// 	char *str = head->content; 
-// 	printf("%s\n", str);
-// }

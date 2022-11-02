@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 13:14:30 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/31 23:59:20 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/11/01 20:35:32 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (i < n)
 	{
 		if (str1[i] != str2[i])
-			return ((unsigned char)str1[i] - (unsigned char)str2[i]);
+			return (str1[i] - str2[i]);
 		i++;
 	}
-	if (i == n)
-		return (0);
-	return ((unsigned char)str1[i] - (unsigned char)str2[i]);
+	return (0);
 }

@@ -1,27 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/15 12:54:31 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/11/02 23:22:49 by yes-slim         ###   ########.fr       */
+/*   Created: 2022/11/02 21:43:52 by yes-slim          #+#    #+#             */
+/*   Updated: 2022/11/02 23:35:44 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	char	*str;
-	size_t	i;
+	t_list	*head;
+	t_list	*tmp;
+	void	*content;
 
-	i = 0;
-	str = (char *)s;
-	while (i < n)
+	if (!f || !del)
+		return (NULL);
+	head = NULL;
+	while (lst)
 	{
-		str[i] = '\0';
-		i++;
+		content = f(lst->content);
+		tmp = ft_lstnew(content);
+		if (!tmp)
+		{
+			if (content)
+				del(content);
+			ft_lstclear(&head, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&head, tmp);
+		lst = lst->next;
 	}
+	return (head);
 }

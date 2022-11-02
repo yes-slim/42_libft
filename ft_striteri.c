@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 15:06:54 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/31 23:54:23 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/11/02 12:41:58 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
 
-	if (!s && !f)
+	if (!s || !f)
 		return ;
 	i = 0;
 	while (s[i] != '\0')

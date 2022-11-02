@@ -6,12 +6,11 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 15:14:36 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/31 23:53:48 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/11/01 13:49:50 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 void	ft_putstr_fd(char *s, int fd)
 {

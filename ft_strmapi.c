@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 15:19:37 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/31 23:54:18 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/11/02 12:38:07 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 	char			*str;
 
-	if (!s && !f)
+	if (!s || !f)
 		return (NULL);
 	i = 0;
 	str = malloc((ft_strlen(s) + 1) * sizeof(char));

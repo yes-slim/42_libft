@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 12:25:27 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/31 23:55:26 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/11/02 15:32:35 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,15 +54,13 @@ static size_t	check_back(char const *s, char const *set)
 
 char	*ft_strtrim(char const *s, char const *set)
 {
+	char	*str;
 	size_t	l;
 	size_t	i;
 	size_t	j;
-	char	*str;
 
-	if (!s)
+	if (!s || !set)
 		return (NULL);
-	if (!set)
-		return ((char *)s);
 	l = 0;
 	i = check_front(s, set);
 	if (s[l] == '\0' || i == ft_strlen(s))

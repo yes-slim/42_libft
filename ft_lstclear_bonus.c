@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 10:12:49 by yes-slim          #+#    #+#             */
-/*   Updated: 2022/10/31 23:52:40 by yes-slim         ###   ########.fr       */
+/*   Updated: 2022/11/03 09:08:41 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*tmp;
 
-	if (!*lst || !del)
+	if (!lst || !del)
 		return ;
 	while (*lst)
 	{

@@ -6,7 +6,7 @@
 #    By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/15 11:42:28 by yes-slim          #+#    #+#              #
-#    Updated: 2022/11/03 21:34:32 by yes-slim         ###   ########.fr        #
+#    Updated: 2022/11/04 19:14:33 by yes-slim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,12 +70,6 @@ OBJF = $(CSRCS:.c=.o)
 BONUS_OBJF = $(BONUS_SRCS:.c=.o)
 
 all : $(NAME) 
-
-$(OBJF) : $(CSRCS)
-	$(CC) $(CFLAGS) $(CSRCS)
-
-$(BONUS_OBJF) : $(BONUS_SRCS)
-	$(CC) $(CFLAGS) $(BONUS_SRCS)
 
 $(NAME) : $(OBJF)
 	$(LIBF) $(NAME) $(OBJF)

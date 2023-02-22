@@ -1,4 +1,6 @@
 42_libft
 ---
 
-<a href="https://github.com/JaeSeoKim/badge42"><img src="https://badge42.vercel.app/api/v2/cl9smgnrq00250fju0ztclesb/project/2825116" alt="yes-slim's 42 Libft Score" /></a>
+<div align="center">
+This project is about coding a C library.<br />
+It will contain a lot of general purpose functions your programs will rely upon.

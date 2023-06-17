@@ -12,17 +12,6 @@
 
 #include "libft.h"
 
-static int	join(int i, int j, char *str, char const *s)
-{
-	while (s[i] != '\0')
-	{
-		str[j] = s[i];
-		i++;
-		j++;
-	}
-	return (j);
-}
-
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int		i;
